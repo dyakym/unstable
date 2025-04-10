@@ -1,0 +1,41 @@
+.wrapper {
+  perspective: 300px;
+}
+
+.rightSide {
+  width: 50%;
+  transform-origin: center center;
+  transform: rotateY(-25deg) translateY(80px);
+}
+
+.leftSide {
+  width: 50%;
+  transform-origin: center center;
+  transform: rotateY(25deg) translateY(80px);
+}
+
+.animationRight {
+  animation: slideAnimationRight 20s linear infinite
+}
+
+.animationLeft {
+  animation: slideAnimationLeft 20s linear infinite
+}
+
+@keyframes slideAnimationLeft {
+  0% {
+    transform: translateX(0);
+  } 
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideAnimationRight {
+  0% {
+    transform: translateX(-50%);
+  } 
+  100% {
+    transform: translateX(0);
+  }
+}

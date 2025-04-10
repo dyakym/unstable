@@ -1,0 +1,79 @@
+.line::before {
+  content: "";
+  display: block;
+  width: 31px;
+  height: 71px;
+  margin-right: 8px;
+  background-image: url("/icon/footer-line.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  .icon {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      background-size: cover;
+      background-position: center;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+
+      &:hover {
+        width: 100px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: white;
+      transform: scale(0);
+      transition: transform 0.3s ease;
+      z-index: 1;
+    }
+  }
+
+  &:hover .icon::before {
+    transform: scale(1);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.iconTwitter .icon::after {
+  background-image: url('/icon/x-twitter.svg');
+}
+
+.iconTwitter:hover .icon::after {
+  filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(183deg) brightness(100%) contrast(100%);
+}
+
+.iconDiscord .icon::after {
+  background-image: url('/icon/discord.svg');
+}
+
+.iconDiscord:hover .icon::after {
+  filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(183deg) brightness(100%) contrast(100%);
+}
+
+.iconInstagram .icon::after {
+  background-image: url('/icon/instagram.svg');
+}
+
+.iconInstagram:hover .icon::after {
+  filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(183deg) brightness(100%) contrast(100%);
+}

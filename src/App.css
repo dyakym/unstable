@@ -1,0 +1,6 @@
+.app-container {
+  background-image: url('./images/BG.png');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+}

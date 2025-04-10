@@ -1,0 +1,33 @@
+.cloudsRight {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 1024px;
+  opacity: 0;
+
+  @media (max-width: 1440px) {
+    top: 15%;
+  }
+
+  @media (max-width: 768px) {
+    top: 10%;
+    width: 524px;
+  }
+}
+
+.cloudsLeft {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 1024px;
+  opacity: 0;
+
+  @media (max-width: 1440px) {
+    top: 45%;
+  }
+
+  @media (max-width: 768px) {
+    width: 524px;
+    top: 80%;
+  }
+}

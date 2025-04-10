@@ -1,0 +1,36 @@
+.maskWrapper {
+  position: relative;
+  width: 150px;
+  height: 700px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 78px;
+    height: 387px;
+  }
+}
+
+.maskedVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 256px;
+  height: 700px;
+  object-fit: cover;
+
+  mask-image: url('/icon/text/soundscape.svg');
+  mask-repeat: no-repeat;
+  mask-size: 150px 700px;
+  mask-position: center;
+
+  -webkit-mask-image: url('/icon/text/soundscape.svg');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 150px 700px;
+  -webkit-mask-position: center;
+
+  @media (max-width: 768px) {
+    height: 387px;
+    mask-size: 78px 387px;
+    -webkit-mask-size: 78px 387px;
+  }
+}
